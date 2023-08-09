@@ -15,16 +15,20 @@ JavaScript
 
 ```javascript
 
+
 var nomes = ['Emilio', 'Clarice', 'Thiago', 'João', 'Pedro', 'Fabio', 'Wesley', 'Bruno', 'Alesson', 'Ana'];
 var idade = [29, 26, 28, 27, 27, 30, 28, 24, 25, 23];
 var cores = ['Preto', 'Rosa', 'Azul', 'Verde', 'Laranja', 'Vermelho', 'Roxo', 'Magenta', 'Branco', 'Amarelo'];
-console.log(nomes)
-console.log(idade)
-console.log(cores)
+
+for (let i = 0; i < nomes.length; i++) {
+    console.log("nome:", nomes[i], " idade: ", idade[i], " cor: ", cores[i]);
+    }
+
 idade.splice(0,1, 31);
 cores.splice(0,1, "Vinho");
-console.log(nomes);
-console.log(idade);
-console.log(cores);
+
+for (let i = 0; i < nomes.length; i++) {
+    console.log("nome: ", nomes[i], " , idade: ", idade[i], " cor: ", cores[i]);
+    }
 
 ```
