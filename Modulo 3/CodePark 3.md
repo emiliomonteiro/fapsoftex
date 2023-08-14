@@ -7,10 +7,13 @@ Levando em conta as três estruturas de dados (fila, lista e pilha) e as suas re
 
 # Resposta
 
+Para fila a ordem seria: 3, 7, 9, 1, 0.
+Para pilha a ordem seria: 0, 1, 9, 7, 3.
+Para lista a ordem seria: 3, 7, 9, 1, 0.
+
 JavaScript
 
 ```javascript
-
 
 var fila = [3, 7, 9, 1, 0];
 var lista = [3, 7, 9, 1, 0];
@@ -26,5 +29,17 @@ while(pilha.length != 0){
     console.log(pilha[pilha.length - 1]);
     pilha.pop();
 }
+
+function removerLista(element) {
+    const quantLista = lista.indexOf(element);
+    if(quantLista !== -1) {
+        lista.splice(quantLista, 1);
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(lista);
 
 ```
