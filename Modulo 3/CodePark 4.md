@@ -1,9 +1,7 @@
 # Proposta:
-Temos o array [15, 8, 10, 25, 12, 30, 5, 20, 18, 7] e precisamos criar um código em JavaScript para encontrar o valor 20.
+Crie uma lista encadeada em que cada elemento representa uma pessoa.
 
-Para isso, temos que escolher entre realizar uma busca linear ou binária de acordo com a que for mais adequada para essa situação.
-
-Codifique a solução mais eficiente para buscar o número 20 no array.
+Ela precisa conter informações como nome, idade e referência ao filho dela.
 
 # Resposta
 
@@ -30,14 +28,14 @@ class listagem {
         }
     };
 
-    print = (separator = ', ') =>{
-        const result = [];
-        let temp = this.head;
-        while(temp){
-            result.push(temp.nome, temp.idade);
-            temp = temp.filho;
+    print = (separa = ', ') =>{
+        const resultado = [];
+        let impri = this.head;
+        while(impri){
+            resultado.push(impri.nome, impri.idade);
+            impri = impri.filho;
         }
-        return result.join(separator);
+        return resultado.join(separa);
     }
 };
 
