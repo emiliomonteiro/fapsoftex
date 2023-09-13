@@ -1,27 +1,55 @@
 const prompt = require("prompt-sync")({ sigint: true });
 let operacao = prompt(
-    "Qual Operação deseja executar? Digite 1 para Adição, Digite 2 para Subtração, Digite 3 para Divisão, Digite 4 para Multiplicação."
+    "Qual Operação deseja executar? Digite + para Adição, Digite - para Subtração, Digite / para Divisão, Digite * para Multiplicação."
 );
-let num1 = prompt("");
 
 switch (operacao) {
-    case "1":
+    case "+":
         adicao();
         break;
 
-    case "2":
+    case "-":
         subtracao();
         break;
 
-    case "3":
+    case "/":
         divisao();
         break;
 
-    case "4":
+    case "*":
         multiplicacao();
         break;
 
     default:
         console.log("Operação incorreta");
         break;
+}
+
+function adicao() {
+    let num1 = prompt("Qual o primeiro numero?");
+    let num2 = prompt("Qual o segundoo numero?");
+    let resultado = parseInt(num1) + parseInt(num2);
+    console.log("O resultado é: ", resultado);
+}
+
+function subtracao() {
+    let num1 = prompt("Qual o primeiro numero?");
+    let num2 = prompt("Qual o segundo numero?");
+    let resultado = parseInt(num1) - parseInt(num2);
+    console.log("O resultado é: ", resultado);
+}
+
+function divisao() {
+    let num1 = prompt("Qual o primeiro numero?");
+    let num2 = prompt("Qual o segundo numero?");
+    let resultado = parseInt(num1) / parseInt(num2);
+    let resto = parseInt(num1) % parseInt(num2);
+    console.log("O resultado é: ", resultado, "e o resto: ", resto);
+}
+
+function multiplicacao() {
+    let num1 = prompt("Qual o primeiro numero?");
+    let num2 = prompt("Qual o segundo numero?");
+    let resultado = parseInt(num1) * parseInt(num2);
+    console.log("O resultado é: ", resultado);
 }
