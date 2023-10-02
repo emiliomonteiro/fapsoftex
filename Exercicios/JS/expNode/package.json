@@ -1,0 +1,18 @@
+{
+  "name": "curso_node",
+  "version": "1.0.0",
+  "description": "Curso do FAP para aprender Node.JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Educação"
+  ],
+  "author": "Danilo Farias",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "type": "module"
+}
