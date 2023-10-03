@@ -1,19 +1,21 @@
-export interface Clientes {
+export interface Client {
   id: number;
   rg: number;
   name: string;
   email: string;
 }
-export interface Produtos {
+
+export interface Product {
   id: number;
   name: string;
   price: number;
-  estoque: number;
+  stock: number; 
 }
-export interface Venda {
+
+export interface Sale {
   id: number;
-  client_id: number;
-  product_id: number;
+  clientId: number; 
+  productId: number; 
   quantity: number;
   total: number;
 }
