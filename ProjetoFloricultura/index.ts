@@ -108,6 +108,19 @@ app.get("/clientes/:id/vendas", (req, res) => {
   res.status(200).json({ totalSales });
 });
 
+app.get("/relatorios", (req, res) => {
+  const totalSales = calculateTotalSales();
+  res.status(200).json({ totalSales });
+});
+
+function calculateTotalSales(): number {
+  let totalSales = 0;
+  sales.forEach((sale) => {
+    totalSales += sale.total;
+  });
+  return totalSales;
+}
+
 function calculateTotalSalesForClient(clientId: number): number {
   let totalSales = 0;
 
