@@ -1,6 +1,6 @@
 {
-    "id": "1",
-		"rg": "12345",
-    "name": "teste",
-    "email": "teste@teste.com"
+  "id": 1,
+  "rg": 123456789,
+  "name": "Teste",
+  "email": "test@example.com"
 }
