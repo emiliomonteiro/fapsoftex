@@ -16,27 +16,27 @@ app.get("/", (req, res) => {
   res.send('Floricultura Softex');
 });
 
-app.post("/clients", (req, res) => {
+app.post("/clientes", (req, res) => {
   const client: Client = req.body;
   clients.push(client);
   res.status(201).json(client);
 });
 
-app.get("/clients", (req, res) => {
+app.get("/clientes", (req, res) => {
   res.status(200).json(clients);
 });
 
-app.post("/products", (req, res) => {
+app.post("/produtos", (req, res) => {
   const product: Product = req.body;
   products.push(product);
   res.status(201).json(product);
 });
 
-app.get("/products", (req, res) => {
+app.get("/produtos", (req, res) => {
   res.status(200).json(products);
 });
 
-app.put("/products/:id", (req, res) => {
+app.put("/produtos/:id", (req, res) => {
   const productId = parseInt(req.params.id);
   const product: Product = req.body;
 
@@ -50,7 +50,7 @@ app.put("/products/:id", (req, res) => {
   }
 });
 
-app.delete("/products/:id", (req, res) => {
+app.delete("/produtos/:id", (req, res) => {
   const productId = parseInt(req.params.id);
 
   const index = products.findIndex((p) => p.id === productId);
@@ -63,7 +63,7 @@ app.delete("/products/:id", (req, res) => {
   }
 });
 
-app.post("/sales", (req, res) => {
+app.post("/vendas", (req, res) => {
   const sale: Sale = req.body;
 
   const clientExists = clients.some((client) => client.id === sale.clientId);
@@ -100,11 +100,11 @@ app.post("/sales", (req, res) => {
   res.status(201).json(sale);
 });
 
-app.get("/sales", (req, res) => {
+app.get("/vendas", (req, res) => {
   res.status(200).json(sales);
 });
 
-app.get("/clients/:id/sales", (req, res) => {
+app.get("/clientes/:id/vendas", (req, res) => {
   const clientId = parseInt(req.params.id);
   const totalSales = calculateTotalSalesForClient(clientId);
   res.status(200).json({ totalSales });
