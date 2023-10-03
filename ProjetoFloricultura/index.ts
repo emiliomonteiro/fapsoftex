@@ -27,7 +27,7 @@ app.get("/clientes", (req, res) => {
 });
 
 app.post("/produtos", (req, res) => {
-  const product: Product = req.body;
+  const product: Product = req.body as Product;
   products.push(product);
   res.status(201).json(product);
 });
@@ -64,7 +64,7 @@ app.delete("/produtos/:id", (req, res) => {
 });
 
 app.post("/vendas", (req, res) => {
-  const sale: Sale = req.body;
+  const sale: Sale = req.body as Sale;
 
   const clientExists = clients.some((client) => client.id === sale.clientId);
 
