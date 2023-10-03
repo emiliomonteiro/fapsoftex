@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/clientes", (req, res) => {
-  const client: Client = req.body;
+  const client: Client = req.body as Client;
   clients.push(client);
   res.status(201).json(client);
 });
@@ -72,9 +72,7 @@ app.post("/vendas", (req, res) => {
     return res.status(400).json({ error: "Client not registered." });
   }
 
-  const correctPrice = products.some(
-    (product) => product.price * sale.quantity === sale.total
-  );
+  const correctPrice = products.some((product) => product.price * sale.quantity === sale.total);
 
   if (!correctPrice) {
     return res.status(400).json({ error: "Price discrepancy." });
