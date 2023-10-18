@@ -1,6 +1,6 @@
-Projeto em andamento de sistema de abertura de chamados de suporte para hotelaria.
+## Projeto em andamento de sistema de abertura de chamados de suporte para hotelaria.
 
-#ToDo:
+## ToDo:
 1. Adicionar validações no código.
 2. Adicionar middlewares.
 3. Criar modelo conceitual de banco de dados.
