@@ -1,1 +1,1 @@
-insert into funcionario(nome, cargo) values("Emilio", "Teste")funcionario
+insert into funcionario(nome, cargo) values("Emilio", "Teste")
