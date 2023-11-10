@@ -1,3 +1,6 @@
+# Resposta
+
+```JavaScript
 function exibirMenu(): void {
     console.log("Escolha uma operação:");
     console.log("1. Soma");
@@ -32,3 +35,16 @@ const numero1 = 5;
 const numero2 = 3;
 
 calculadora(operacaoEscolhida, numero1, numero2);
+
+
+const prompt = require('prompt-sync')({sigint: true});
+
+var nota1 = prompt("Qual a primeira nota a ser inserida?");
+var nota2 = prompt("Qual a segunda nota a ser inserida?");
+var nota3 = prompt("Qual a terceira nota a ser inserida?");
+
+var media = (Number(nota1) + Number(nota2) + Number(nota3)) / 3;
+
+console.log(media);
+
+```
